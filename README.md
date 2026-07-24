@@ -377,6 +377,4 @@ network-analysis-lab/
 
 Ce laboratoire complète le projet **Secure Linux Server Lab** en passant de la sécurisation d'un serveur à l'analyse et à la détection du trafic réseau.
 
-Au cours de ce projet, j'ai appris à capturer des paquets avec Wireshark, à distinguer un trafic normal d'un comportement suspect (scan de ports et tentatives de brute-force SSH) et à mettre en place un système de détection d'intrusion avec Suricata.
-
 L'objectif n'était pas seulement d'utiliser ces outils, mais aussi de comprendre leur fonctionnement, de diagnostiquer les problèmes rencontrés et de documenter chaque étape afin de reproduire une méthodologie proche d'un environnement professionnel.  
