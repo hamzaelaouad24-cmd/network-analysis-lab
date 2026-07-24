@@ -1,6 +1,6 @@
 # Network Analysis Lab
 
-Analyse et détection réseau sur un serveur Debian déjà sécurisé (voir [Secure Linux Server Lab](../secure-linux-server-lab)), réalisée dans une VM VirtualBox, avec documentation de chaque étape et des choix effectués.
+Analyse et détection réseau sur un serveur Debian déjà sécurisé (voir [Secure Linux Server Lab](https://github.com/hamzaelaouad24-cmd/secure-linux-server-lab)), réalisée dans une VM VirtualBox, avec documentation de chaque étape et des choix effectués.
 
 ## Technologies utilisées
 
