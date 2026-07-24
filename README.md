@@ -97,7 +97,7 @@ Filtre appliqué : `tcp.port == 22`
 
 Le "three-way handshake" (SYN → SYN-ACK → ACK) établit la connexion TCP avant même que SSH n'entre en jeu. Ensuite, les deux machines s'annoncent leur version, négocient les clés de chiffrement (Key Exchange), et à partir de là tout devient illisible (`Encrypted packet`).
 
-![Handshake SSH](screenshots/02-ssh-handshake.png)
+![Handshake SSH](02-ssh-handshake.png)
 
 ### Filtrage et résultat — requête DNS
 
@@ -107,7 +107,7 @@ Filtre appliqué : `dns`
 10.0.2.15 → 8.8.8.8    Standard query 0x5d01 A google.com
 8.8.8.8   → 10.0.2.15  Standard query response 0x5d01 A google.com A 172.217.22.174
 ```
-![Requête DNS](screenshots/03-dns-query.png)
+![Requête DNS](03-dns-query.png)
 
 ### Problèmes rencontrés et résolus
 
@@ -147,11 +147,10 @@ Filtre appliqué : `tcp.flags.syn==1 && tcp.flags.ack==0`
 ...
 ```
 
-Sur 2028 paquets capturés, 2003 sont des SYN purs : une rafale de tentatives de connexion vers des dizaines de ports différents, envoyée en une fraction de seconde. C'est ce volume et cette diversité de ports qui distinguent un scan d'un usage normal — à comparer avec la connexion SSH de l'étape 2, qui n'avait qu'**un seul** SYN vers **un seul** port.
-
-![Scan nmap capturé](screenshots/04-nmap-scan-capture.png)
-
+Sur 2028 paquets capturés, 2003 sont des SYN purs : une rafale de tentatives de connexion vers des dizaines de ports différents, envoyée en une fraction de seconde. C'est ce volume et cette diversité de ports qui distinguent un scan d'un usage normal — à comparer avec la connexion SSH de l'étape 2, qui n'avait qu'**un seul** SYN vers **un seul** port. 
+                                                                                                                                 
 ---
+![Scan nmap capturé](04-nmap-scan-capture.png)
 
 ## Étape 4 — Brute-force SSH capturé
 
@@ -186,7 +185,7 @@ Filtre appliqué : `tcp.port == 22`
 
 Chaque tentative reproduit un cycle complet (handshake TCP + négociation SSH), qui se termine par un `[RST, ACK]` rapide suivi immédiatement d'un nouveau `[SYN]` sur un nouveau port source. C'est cette **répétition rapide et automatique** du même cycle, à quelques secondes d'intervalle, qui constitue la signature du brute-force — un humain qui se trompe de mot de passe ne relance pas une connexion SSH complète toutes les 1-2 secondes.
 
-![Brute-force SSH capturé](screenshots/05-ssh-bruteforce-capture.png)
+![Brute-force SSH capturé](05-ssh-bruteforce-capture.png)
 
 ### Réaction fail2ban confirmée
 
@@ -206,7 +205,7 @@ sudo fail2ban-client status sshd
 
 Fail2ban (configuré au projet 1) a bien détecté les 3 tentatives échouées et banni l'IP source automatiquement — la protection installée précédemment fonctionne exactement comme prévu face à ce test.
 
-![Bannissement fail2ban confirmé](screenshots/06-fail2ban-ban-confirmed.png)
+![Bannissement fail2ban confirmé](06-fail2ban-ban-confirmed.png)
 
 ---
 
@@ -330,7 +329,7 @@ Résultat obtenu automatiquement dans le log, sans intervention manuelle :
 
 Suricata a détecté seul, en temps réel, exactement le comportement observé manuellement à l'étape 3 dans Wireshark — la preuve que la détection automatique fonctionne.
 
-![Alerte Suricata](screenshots/07-suricata-alert.png)
+![Alerte Suricata](07-suricata-alert.png)
 
 ---
 
