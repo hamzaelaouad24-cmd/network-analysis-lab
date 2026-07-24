@@ -20,6 +20,23 @@ Ce projet complète le premier lab de sécurisation : après avoir **protégé**
 - Savoir lire et interpréter du trafic réseau brut (analyse de paquets)
 - Reconnaître la différence entre un trafic légitime et un comportement suspect (reconnaissance, brute-force)
 - Mettre en place un outil de détection automatique (IDS) capable d'alerter sans intervention humaine
+  ## Architecture du laboratoire
+
+```text
+                Windows Host
+             (192.168.56.1)
+                     │
+         SSH / Nmap / Trafic réseau
+                     │
+        Host-only Network (VirtualBox)
+                     │
+             Debian VM
+         (192.168.56.101)
+                     │
+     ┌───────────────┼───────────────┐
+     │               │               │
+  Wireshark      Suricata       Fail2Ban
+ (Capture)         (IDS)      (Protection SSH)
 
 ## Environnement
 
