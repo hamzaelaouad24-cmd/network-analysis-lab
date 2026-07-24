@@ -52,7 +52,7 @@ wireshark &
 
 Résultat attendu : la fenêtre Wireshark affiche la liste des interfaces réseau disponibles (`enp0s3`, `enp0s8`, `lo`...).
 
-![Wireshark installé](screenshots/01-wireshark-installed.png)
+![Wireshark installé](01-wireshark-installed.png)
 
 ### Problème rencontré et résolu
 
