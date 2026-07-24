@@ -20,23 +20,6 @@ Ce projet complète le premier lab de sécurisation : après avoir **protégé**
 - Savoir lire et interpréter du trafic réseau brut (analyse de paquets)
 - Reconnaître la différence entre un trafic légitime et un comportement suspect (reconnaissance, brute-force)
 - Mettre en place un outil de détection automatique (IDS) capable d'alerter sans intervention humaine
-  ## Architecture du laboratoire
-
-```text
-                Windows Host
-             (192.168.56.1)
-                     │
-         SSH / Nmap / Trafic réseau
-                     │
-        Host-only Network (VirtualBox)
-                     │
-             Debian VM
-         (192.168.56.101)
-                     │
-     ┌───────────────┼───────────────┐
-     │               │               │
-  Wireshark      Suricata       Fail2Ban
- (Capture)         (IDS)      (Protection SSH)
 
 ## Environnement
 
@@ -390,3 +373,11 @@ network-analysis-lab/
 ├── 06-fail2ban-ban-confirmed.png
 └── 07-suricata-alert.png
 ```
+## Conclusion
+
+Ce laboratoire complète le projet **Secure Linux Server Lab** en passant de la sécurisation d'un serveur à l'analyse et à la détection du trafic réseau.
+
+Au cours de ce projet, j'ai appris à capturer des paquets avec Wireshark, à distinguer un trafic normal d'un comportement suspect (scan de ports et tentatives de brute-force SSH) et à mettre en place un système de détection d'intrusion avec Suricata.
+
+L'objectif n'était pas seulement d'utiliser ces outils, mais aussi de comprendre leur fonctionnement, de diagnostiquer les problèmes rencontrés et de documenter chaque étape afin de reproduire une méthodologie proche d'un environnement professionnel.  ---
+Projet réalisé dans le cadre de mon apprentissage en cybersécurité afin de développer des compétences pratiques en administration système, sécurité Linux et analyse réseau.
