@@ -2,6 +2,17 @@
 
 Analyse et détection réseau sur un serveur Debian déjà sécurisé (voir [Secure Linux Server Lab](../secure-linux-server-lab)), réalisée dans une VM VirtualBox, avec documentation de chaque étape et des choix effectués.
 
+## Technologies utilisées
+
+- Debian 13
+- Linux
+- VirtualBox
+- Wireshark
+- Suricata
+- Nmap
+- OpenSSH
+- Fail2Ban
+
 ## Objectif du projet
 
 Ce projet complète le premier lab de sécurisation : après avoir **protégé** un serveur (SSH par clé, pare-feu, fail2ban...), il s'agit maintenant d'apprendre à **observer, comprendre et détecter** ce qui se passe réellement sur le réseau autour de lui. C'est un axe de compétence complémentaire, essentiel en cybersécurité :
