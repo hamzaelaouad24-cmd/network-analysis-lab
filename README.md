@@ -1,4 +1,10 @@
 # Network Analysis Lab
+![Linux](https://img.shields.io/badge/Linux-Debian-red?logo=debian)
+![Wireshark](https://img.shields.io/badge/Wireshark-Network%20Analysis-blue?logo=wireshark)
+![Suricata](https://img.shields.io/badge/Suricata-IDS-orange)
+![Nmap](https://img.shields.io/badge/Nmap-Network%20Scanning-success)
+![VirtualBox](https://img.shields.io/badge/VirtualBox-Lab-informational?logo=virtualbox)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Analyse et détection réseau sur un serveur Debian déjà sécurisé (voir [Secure Linux Server Lab](https://github.com/hamzaelaouad24-cmd/secure-linux-server-lab)), réalisée dans une VM VirtualBox, avec documentation de chaque étape et des choix effectués.
 
