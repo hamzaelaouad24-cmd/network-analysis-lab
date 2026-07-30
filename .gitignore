@@ -1,0 +1,28 @@
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Linux backup files
+*~
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Python cache
+__pycache__/
+
+# VirtualBox
+*.vbox-prev
