@@ -17,7 +17,7 @@ Analyse et détection réseau sur un serveur Debian déjà sécurisé (voir [Sec
 - Suricata
 - Nmap
 - OpenSSH
-- Fail2Ban
+- Fail2ban
 
 ## Objectif du projet
 
